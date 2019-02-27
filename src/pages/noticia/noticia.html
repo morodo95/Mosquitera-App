@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar color="danger">
+    <ion-title>{{quote.title.rendered}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <ion-card>
+    <h2 style="text-align: center;" padding>
+      {{quote.title.rendered}}
+    </h2>
+    <ion-card-content>
+      {{quote.content.rendered}}
+    </ion-card-content>
+    <div class="sociales">
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{quote.link}}" target="_blank"> <ion-icon name="logo-facebook" id="facebook"></ion-icon></a> 
+        <a href="http://www.twitter.com/home?status={{quote.link}}" target="_blank"><ion-icon name="logo-twitter" id="twitter"></ion-icon></a> 
+    </div>
+  </ion-card>
+</ion-content>

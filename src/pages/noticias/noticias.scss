@@ -1,0 +1,25 @@
+page-noticias {
+    .body{
+        background-image: url('../../assets/imgs/Background-home.jpg');
+    }
+
+    .card img{
+        height: 200px;
+    }
+
+    .sociales{
+        text-align: end;
+    }
+
+    #facebook{
+        color: rgb(38, 38, 39);
+        font-size: 25px;
+        padding: 10px;
+    }
+
+    #twitter{
+        color: rgb(38, 38, 39);
+        font-size: 25px;
+    }
+
+}

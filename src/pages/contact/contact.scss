@@ -1,0 +1,24 @@
+page-contact {
+    ion-content{
+        background-color: gray;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        font-family: sans-serif;
+    }
+    .body{
+        background-image: url('../../assets/imgs/Background-home.jpg');
+    }
+
+    .row .col {
+        border-bottom: 1px solid rgb(197, 193, 193);
+        text-align: center;
+        color: white;
+    }
+
+    .grid{
+        padding:0px;
+    }
+    
+}
+
+

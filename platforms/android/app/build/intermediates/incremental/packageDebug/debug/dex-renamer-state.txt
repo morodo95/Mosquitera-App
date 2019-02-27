@@ -1,0 +1,4 @@
+#Tue Feb 26 01:29:04 ART 2019
+base.0=C\:\\xampp\\htdocs\\lamosquitera\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,53 @@
+page-welcome {
+    .body{
+        background-image: url('../../assets/imgs/Background-home.jpg');
+    }
+    .boton{
+        text-align: center;
+        margin: auto;
+        display: inline-flex;
+    }
+    .boton button{
+        background-color: transparent;
+    }
+    .boton button{
+        width: 50%;
+    }
+    .boton button img{
+        width: 50%;
+    }
+    .boton .pause img{
+        width: 30%;
+    }
+
+    .publicidad{
+        text-align: center;
+        color: white;
+    }
+
+    .mensaje{
+        text-align: center;
+        color: rgb(46, 35, 35);
+        background-color: rgba(53, 230, 68, 0.973);
+        padding: 0px;
+        width: 100%;
+        margin: auto;
+        padding: 10px;
+        
+    }
+    .mensaje a{
+        padding: 10px;
+        width: 60%;
+        text-decoration: none;
+        color: white;
+    }
+
+    .slides{
+        height: 200px;
+        margin-top: -30px;
+        list-style: none;
+    }
+
+
+
+}

@@ -1,0 +1,36 @@
+
+<ion-header>
+    <div style="background-color:white;">
+        <img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" >
+    </div>
+  </ion-header>
+<ion-content class="body">
+  <br><br>
+ <br><br>
+  <div class="boton">
+    <button [disabled]="bandera"  (click)="play()" ><img src="../../assets/imgs/arrowButtonplay.png"></button>
+    <button [disabled]="!bandera" id="pause" (click)="stop()" ><img src="../../assets/imgs/arrowButtonpause.png"></button>
+  </div>
+  <br>
+  <br>
+  <ion-card  *ngFor="let programa of programas" >
+      <img src="{{programa.imagen}}" alt="">
+  </ion-card>
+  <div class="mensaje">
+    <a href="https://api.whatsapp.com/send?phone=5492615582435">Participa por Whatsapp <ion-icon name="logo-whatsapp"></ion-icon></a>
+  </div>
+  <br><br>
+    <ion-slides autoplay="5000" loop="true" speed="500" >
+      <ion-slide>
+        <img src="http://lamosquitera.org/wp-content/uploads/2019/02/03-LA-MOSQUITERA-354X119-1-1.gif" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="http://lamosquitera.org/wp-content/uploads/2018/12/MOSQUITERA_354x119px_6bim.gif" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="http://lamosquitera.org/wp-content/uploads/2018/11/sute-m%C3%A1s-para-educaci%C3%B3n-2.jpg" alt="">
+      </ion-slide>
+    </ion-slides>
+
+
+</ion-content>
