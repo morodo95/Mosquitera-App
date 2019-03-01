@@ -15,13 +15,15 @@ import { NoticiaPage } from '../noticia/noticia';
   templateUrl: 'noticias.html',
 })
 export class NoticiasPage {
-  quotes;
+  quotes:string;
   constructor(public navCtrl: NavController, public navParams: NavParams, public  auth: AuthServiceProvider) {
     
     this.auth.getQuotes().subscribe(data => {
       console.log(data);
       this.quotes = data;
     });
+
+    
   }
 
   ionViewDidLoad() {

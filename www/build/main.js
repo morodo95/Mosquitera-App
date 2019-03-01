@@ -1,6 +1,56 @@
 webpackJsonp([0],{
 
-/***/ 111:
+/***/ 101:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(280);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/*
+  Auth - Service, sirve para la identificación y traer datos de la api externa.
+
+
+*/
+var AuthServiceProvider = /** @class */ (function () {
+    function AuthServiceProvider(http) {
+        this.http = http;
+        this.apiUrl = "http://lamosquitera.org/wp-json/wp/v2/posts";
+        this.apiImg = "http://apimosquitera.lavena.com.ar/";
+        console.log('Hello QuotesProvider Provider');
+    }
+    AuthServiceProvider.prototype.getQuotes = function () {
+        return this.http.get(this.apiUrl).map(function (res) { return res.json(); });
+    };
+    AuthServiceProvider.prototype.getProgramacion = function () {
+        return this.http.get(this.apiImg + 'getimages.php').map(function (res) { return res.json(); });
+    };
+    AuthServiceProvider = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]])
+    ], AuthServiceProvider);
+    return AuthServiceProvider;
+}());
+
+//# sourceMappingURL=authservice.js.map
+
+/***/ }),
+
+/***/ 113:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +63,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 111;
+webpackEmptyAsyncContext.id = 113;
 
 /***/ }),
 
-/***/ 153:
+/***/ 154:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,18 +80,18 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 153;
+webpackEmptyAsyncContext.id = 154;
 
 /***/ }),
 
-/***/ 196:
+/***/ 197:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(198);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -64,7 +114,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\home\home.html"*/'\n\n\n\n<ion-content >\n\n  <div class="nav-bar">\n\n      <div class="menu">\n\n          \n\n      </div>\n\n      <div class="ayuda">\n\n          <a (click)="ayudanouser()">Help</a>\n\n      </div>\n\n  </div>\n\n  <div class="logo">\n\n    <img src="../../assets/imgs/logo.png" alt="">\n\n    <img src="../../assets/imgs/revisiontecnica.png" alt="">\n\n  </div>\n\n\n\n  <div class="boton">\n\n    <ion-buttons>\n\n      <button ion-button (click)="welcome()">Empezar!</button>\n\n    </ion-buttons>\n\n   \n\n  </div>\n\n\n\n  <div class="texto">\n\n    <h5>Presentamos la app de La Asociación Comunicacional y Cultural La Mosquitera.</h5>\n\n     </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\home\home.html"*/'\n\n\n\n<ion-content >\n\n  <div class="nav-bar">\n\n      <div class="menu">\n\n          \n\n      </div>\n\n      \n\n  </div>\n\n  <div class="logo">\n\n    <img src="../../assets/imgs/logo.png" alt="">\n\n    <img src="../../assets/imgs/revisiontecnica.png" alt="">\n\n  </div>\n\n\n\n  <div class="boton">\n\n    <ion-buttons>\n\n      <button ion-button (click)="welcome()">Empezar!</button>\n\n    </ion-buttons>\n\n   \n\n  </div>\n\n\n\n  <div class="texto">\n\n    <h5>Asociación Comunicacional y Cultural La Mosquitera</h5>\n\n     </div>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
     ], HomePage);
@@ -75,15 +125,15 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_contact__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome_welcome__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__noticias_noticias__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_contact__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__welcome_welcome__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__noticias_noticias__ = __webpack_require__(202);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sociales_sociales__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__facebook_facebook__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__instagram_instagram__ = __webpack_require__(206);
@@ -127,7 +177,7 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 198:
+/***/ 199:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -173,7 +223,7 @@ var ContactPage = /** @class */ (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\contact\contact.html"*/'<!--\n  Generated template for the NoticiasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <div style="background-color:white;">\n        <img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" >\n    </div>\n  <ion-navbar color="primary">\n    <ion-title>Programación!</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content class="body" >\n    <ion-grid>\n        <ion-row style="color:rgb(255, 248, 248); font-style: bold;">\n          <ion-col >Hora</ion-col>\n          <ion-col > Programa</ion-col>\n        </ion-row>\n        <ion-row >\n          <ion-col style="background-color: green" >7:00</ion-col>\n          <ion-col style="background-color: green"  >EL ARRANQUE</ion-col>\n        </ion-row>\n        <ion-row >\n            <ion-col style="background-color: red"  >9:00</ion-col>\n            <ion-col style="background-color: red" >LA DIARIA</ion-col>\n          </ion-row>\n          <ion-row >\n              <ion-col style="background-color: rgb(61, 59, 59)"   >12:00</ion-col>\n              <ion-col style="background-color: rgb(61, 59, 59)" >INFORMATIVO NADAL y FARCO</ion-col>\n              \n            </ion-row>\n            <ion-row >\n                <ion-col style="background-color: rgb(255, 196, 0)" >13:00 - Lunes</ion-col>\n                <ion-col style="background-color:  rgb(255, 196, 0)"  >M-M, AL DORSO</ion-col>\n              </ion-row>\n              <ion-row >\n                  <ion-col style="background-color: rgb(0, 26, 255)"  >13:00 - Martes</ion-col>\n                  <ion-col style="background-color: rgb(0, 26, 255)"  >DECI MU</ion-col>\n                </ion-row>\n                <ion-row >\n                    <ion-col style="background-color: rgba(0, 255, 21, 0.63)"  >14:00 - Miercoles</ion-col>\n                    <ion-col style="background-color: rgba(0, 255, 21, 0.63)" >AL SUR DEL RIO BRAVO</ion-col>\n                  </ion-row>\n                  \n                    <ion-row >\n                        <ion-col  style="background-color: rgb(255, 0, 55)" >12:00 - Viernes</ion-col>\n                        <ion-col style="background-color: rgb(255, 0, 55)" >LA CHANGA</ion-col>\n                      </ion-row>\n                      <ion-row >\n                          <ion-col  style="background-color: rgb(0, 174, 255)" >15:00</ion-col>\n                          <ion-col style="background-color: rgb(0, 174, 255)" >FEROZ AMÉRICA</ion-col>\n                        </ion-row>\n                        <ion-row >\n                          <ion-col  style="background-color: rgb(0, 174, 255)" >15:00 - Viernes</ion-col>\n                          <ion-col style="background-color: rgb(0, 174, 255)" >TEMPRANO PARA IMPOSIBLES</ion-col>\n                        </ion-row>\n                        <ion-row >\n                            <ion-col style="background-color: red"  >17:00</ion-col>\n                            <ion-col style="background-color: red" >CINCO PAL PESO</ion-col>\n                          </ion-row>\n                          <ion-row >\n                              <ion-col style="background-color: rgb(68, 0, 255)"  >19:00</ion-col>\n                              <ion-col style="background-color: rgb(68, 0, 255)" >DESDE EL CAFE</ion-col>\n                            </ion-row>\n                            <ion-row >\n                                <ion-col style="background-color: rgb(224, 196, 196)"  >19:00 - Martes</ion-col>\n                                <ion-col style="background-color: rgb(224, 196, 196)" >M,M - ALCARAJO</ion-col>\n                              </ion-row>\n                              <ion-row >\n                                  <ion-col style="background-color: rgb(0, 162, 255)"  >19:00 - Miercoles</ion-col>\n                                  <ion-col style="background-color: rgb(0, 162, 255)" >TOCO Y ME VOY</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col style="background-color: rgb(255, 217, 0)"  >19:00 - Jueves</ion-col>\n                                  <ion-col style="background-color: rgb(255, 217, 0)" >EL OTRO SOY YO</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: rgb(255, 145, 0)" >19:00 - Miercoles</ion-col>\n                                  <ion-col style="background-color: rgb(255, 145, 0)" >NI FULANAS NI MENGANAS</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col style="background-color: rgb(207, 207, 207)"  >21:00 - Lunes</ion-col>\n                                  <ion-col style="background-color: rgb(207, 207, 207)"  >MÚSICA MOSQUITERA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col style="background-color: rgb(0, 195, 255)"   >22:00 - Martes</ion-col>\n                                  <ion-col style="background-color: rgb(0, 195, 255)" >CASI A LA MADRUGADA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: rgb(207, 207, 207)" >21:00 - Miercoles</ion-col>\n                                  <ion-col style="background-color: rgb(207, 207, 207)" >MÚSICA MOSQUITERA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: rgb(162, 0, 255)" >21:00 - Jueves</ion-col>\n                                  <ion-col style="background-color: rgb(162, 0, 255)" >CASI A LA MADRUGADA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: red" >21:00 - Viernes</ion-col>\n                                  <ion-col style="background-color: red" >ZONA REBELDE - RADIOGRAMA</ion-col>\n                                </ion-row>\n      </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\contact\contact.html"*/'<!--\n  Generated template for the NoticiasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n    <div style="background-color:white;">\n      <a href="www.lamosquitera.org"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>\n    </div>\n  <ion-navbar color="primary">\n    <ion-title>Programación!</ion-title>\n  </ion-navbar>\n\n</ion-header>\n<ion-content class="body" >\n    <ion-grid>\n        <ion-row style="color:rgb(255, 248, 248); font-style: bold;">\n          <ion-col >Hora</ion-col>\n          <ion-col > Programa</ion-col>\n        </ion-row>\n        <ion-row >\n          <ion-col style="background-color: #d13034; text-align: left"  >7:00</ion-col>\n          <ion-col style="background-color: #d13034"  >EL ARRANQUE</ion-col>\n        </ion-row>\n        <ion-row >\n            <ion-col style="background-color: #d13034 text-align: left"  >9:00</ion-col>\n            <ion-col style="background-color: #d13034" >LA DIARIA</ion-col>\n          </ion-row>\n          <ion-row >\n              <ion-col style="background-color: #d13034 text-align: left"   >12:00</ion-col>\n              <ion-col style="background-color: #d13034" >INFORMATIVO NODAL y FARCO</ion-col>\n              \n            </ion-row>\n            <ion-row >\n                <ion-col style="background-color: #d13034 text-align: left" >13:00 - Lunes</ion-col>\n                <ion-col style="background-color:  #d13034"  >M-M, AL DORSO</ion-col>\n              </ion-row>\n              <ion-row >\n                  <ion-col style="background-color: #d13034 text-align: left "  >13:00 - Martes</ion-col>\n                  <ion-col style="background-color: #d13034"  >DECI MU</ion-col>\n                </ion-row>\n                <ion-row >\n                    <ion-col style="background-color: #d13034"  >14:00 - Miercoles</ion-col>\n                    <ion-col style="background-color: #d13034" >AL SUR DEL RIO BRAVO</ion-col>\n                  </ion-row>\n                  \n                    <ion-row >\n                        <ion-col  style="background-color: #d13034" >12:00 - Viernes</ion-col>\n                        <ion-col style="background-color: #d13034" >LA CHANGA</ion-col>\n                      </ion-row>\n                      <ion-row >\n                          <ion-col  style="background-color: #d13034" >15:00</ion-col>\n                          <ion-col style="background-color: #d13034" >FEROZ AMÉRICA</ion-col>\n                        </ion-row>\n                        <ion-row >\n                          <ion-col  style="background-color: #d13034" >15:00 - Viernes</ion-col>\n                          <ion-col style="background-color: #d13034" >TEMPRANO PARA IMPOSIBLES</ion-col>\n                        </ion-row>\n                        <ion-row >\n                            <ion-col style="background-color: #d13034"  >17:00</ion-col>\n                            <ion-col style="background-color: #d13034" >CINCO PAL PESO</ion-col>\n                          </ion-row>\n                          <ion-row >\n                              <ion-col style="background-color: #d13034"  >19:00</ion-col>\n                              <ion-col style="background-color: #d13034" >DESDE EL CAFE</ion-col>\n                            </ion-row>\n                            <ion-row >\n                                <ion-col style="background-color: #d13034"  >19:00 - Martes</ion-col>\n                                <ion-col style="background-color: #d13034" >EL CANDIL</ion-col>\n                              </ion-row>\n                              <ion-row >\n                                  <ion-col style="background-color: #d13034"  >19:00 - Miercoles</ion-col>\n                                  <ion-col style="background-color: #d13034" >NO TAN SERIO</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col style="background-color: #d13034"  >19:00 - Jueves</ion-col>\n                                  <ion-col style="background-color: #d13034" >EL OTRO SOY YO</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >19:00 - Viernes</ion-col>\n                                  <ion-col style="background-color: #d13034" >POR COLECTORAS</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col style="background-color: #d13034"  >21:00 - Lunes</ion-col>\n                                  <ion-col style="background-color: #d13034"  >MÚSICA MOSQUITERA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col style="background-color: #d13034"   >21:00 - Jueves</ion-col>\n                                  <ion-col style="background-color: #d13034" >ENSAYOS COMUNES</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >21:00 - Viernes</ion-col>\n                                  <ion-col style="background-color: #d13034" >LA PREVIA CUYANA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >07:00 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >MÚSICA MOSQUITERA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >10:00 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >SALA DE MAESTROS</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >12:00 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >CASTILLOS EN EL AIRE</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >14:50 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >FARCO</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >17:00 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >EL OJO DEL CICLOPE</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >19:00 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >FUTBOL DE AFA EN VIVO - RELATORES</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >23:00 - Sabado</ion-col>\n                                  <ion-col style="background-color: #d13034" >RADIOGRAMA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >07:00 - Domingo</ion-col>\n                                  <ion-col style="background-color: #d13034" >MÚSICA MOSQUITERA</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >11:00 - Domingo</ion-col>\n                                  <ion-col style="background-color: #d13034" >ABRAZANDO LA TRADICIÓN</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >17:00 - Domingo</ion-col>\n                                  <ion-col style="background-color: #d13034" >TOCO Y ME VOY</ion-col>\n                                </ion-row>\n                                <ion-row >\n                                  <ion-col  style="background-color: #d13034" >23:00 - Domingo</ion-col>\n                                  <ion-col style="background-color: #d13034" >MÚSICA MOSQUITERA</ion-col>\n                                </ion-row>\n\n      </ion-grid>\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* App */]])
     ], ContactPage);
@@ -184,13 +234,13 @@ var ContactPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 199:
+/***/ 200:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return WelcomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authservice_authservice__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_authservice_authservice__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -220,28 +270,30 @@ var WelcomePage = /** @class */ (function () {
         this.audio.pause();
         this.bandera = false;
     };
+    WelcomePage.prototype.whatsapp = function () {
+        window.open("https://api.whatsapp.com/send?phone=5492613068060", "_system");
+    };
     WelcomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-welcome',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\welcome\welcome.html"*/'\n\n<ion-header>\n\n    <div style="background-color:white;">\n\n        <img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" >\n\n    </div>\n\n  </ion-header>\n\n<ion-content class="body">\n\n  <br><br>\n\n <br><br>\n\n  <div class="boton">\n\n    <button [disabled]="bandera"  (click)="play()" ><img src="../../assets/imgs/arrowButtonplay.png"></button>\n\n    <button [disabled]="!bandera" id="pause" (click)="stop()" ><img src="../../assets/imgs/arrowButtonpause.png"></button>\n\n  </div>\n\n  <br>\n\n  <br>\n\n  <ion-card  *ngFor="let programa of programas" >\n\n      <img src="{{programa.imagen}}" alt="">\n\n  </ion-card>\n\n  <div class="mensaje">\n\n    <a href="https://api.whatsapp.com/send?phone=5492615582435">Participa por Whatsapp <ion-icon name="logo-whatsapp"></ion-icon></a>\n\n  </div>\n\n  <br><br>\n\n    <ion-slides autoplay="5000" loop="true" speed="500" >\n\n      <ion-slide>\n\n        <img src="http://lamosquitera.org/wp-content/uploads/2019/02/03-LA-MOSQUITERA-354X119-1-1.gif" alt="">\n\n      </ion-slide>\n\n      <ion-slide>\n\n        <img src="http://lamosquitera.org/wp-content/uploads/2018/12/MOSQUITERA_354x119px_6bim.gif" alt="">\n\n      </ion-slide>\n\n      <ion-slide>\n\n        <img src="http://lamosquitera.org/wp-content/uploads/2018/11/sute-m%C3%A1s-para-educaci%C3%B3n-2.jpg" alt="">\n\n      </ion-slide>\n\n    </ion-slides>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\welcome\welcome.html"*/,
+            selector: 'page-welcome',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\welcome\welcome.html"*/'\n\n<ion-header>\n\n    <div style="background-color:white;">\n\n      <a href="www.lamosquitera.org"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>\n\n    </div>\n\n  </ion-header>\n\n<ion-content class="body">\n\n  <br><br>\n\n <br><br>\n\n  <div class="boton">\n\n    <button [disabled]="bandera"  (click)="play()" ><img src="../../assets/imgs/arrowButtonplay.png"></button>\n\n    <button [disabled]="!bandera" id="pause" (click)="stop()" ><img src="../../assets/imgs/arrowButtonpause.png"></button>\n\n  </div>\n\n  <br>\n\n  <br>\n\n  <ion-card  *ngFor="let programa of programas" >\n\n      <img src="{{programa.imagen}}" alt="">\n\n  </ion-card>\n\n  <div class="mensaje">\n\n    <a (click)="whatsapp()">Participa por Whatsapp <ion-icon name="logo-whatsapp"></ion-icon></a>\n\n  </div>\n\n  <br><br>\n\n    <ion-slides autoplay="12000" loop="true" speed="500" >\n\n      <ion-slide>\n\n        <img src="http://lamosquitera.org/wp-content/uploads/2019/02/03-LA-MOSQUITERA-354X119-1-1.gif" alt="">\n\n      </ion-slide>\n\n      <ion-slide>\n\n        <img src="http://lamosquitera.org/wp-content/uploads/2018/12/MOSQUITERA_354x119px_6bim.gif" alt="">\n\n      </ion-slide>\n\n      <ion-slide>\n\n        <img src="http://lamosquitera.org/wp-content/uploads/2018/11/sute-m%C3%A1s-para-educaci%C3%B3n-2.jpg" alt="">\n\n      </ion-slide>\n\n    </ion-slides>\n\n\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\welcome\welcome.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__providers_authservice_authservice__["a" /* AuthServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__providers_authservice_authservice__["a" /* AuthServiceProvider */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_authservice_authservice__["a" /* AuthServiceProvider */]])
     ], WelcomePage);
     return WelcomePage;
-    var _a;
 }());
 
 //# sourceMappingURL=welcome.js.map
 
 /***/ }),
 
-/***/ 200:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NoticiasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authservice_authservice__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_authservice_authservice__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__noticia_noticia__ = __webpack_require__(203);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -281,65 +333,15 @@ var NoticiasPage = /** @class */ (function () {
     };
     NoticiasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-noticias',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\noticias\noticias.html"*/'\n<ion-header>\n  <div style="background-color:white;">\n      <img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" >\n  </div>\n  <ion-navbar color="primary">\n    <ion-title>Noticias</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="body">\n  <ion-card class="card" *ngFor="let quote of quotes" >\n    <ion-card-content>\n      <img src="{{quote.featured_image_urls.medium}}" alt="">\n      <div class="categoria" (click)="onShowQuoteDetail(quote)">\n        <h5>Publicada el: {{ quote.date | date: \'dd/MM/yyyy H:mm\'}}</h5>\n      </div>\n      <ion-card-title (click)="onShowQuoteDetail(quote)">\n          {{ quote.title.rendered }}\n        </ion-card-title>\n      <p>\n        {{ quote.excerpt.rendered }}\n      </p>\n      <div class="sociales">\n          <a href="https://www.facebook.com/sharer/sharer.php?u={{quote.link}}" target="_blank"> <ion-icon name="logo-facebook" id="facebook"></ion-icon></a> \n          <a href="http://www.twitter.com/home?status={{quote.link}}" target="_blank"><ion-icon name="logo-twitter" id="twitter"></ion-icon></a> \n      </div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\noticias\noticias.html"*/,
+            selector: 'page-noticias',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\noticias\noticias.html"*/'\n<ion-header>\n  <div style="background-color:white;">\n      <a href="www.lamosquitera.org"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>\n  </div>\n  <ion-navbar color="primary">\n    <ion-title>Noticias</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="body">\n  <ion-card class="card" *ngFor="let quote of quotes" >\n    <ion-card-content>\n      <img src="{{quote.featured_image_urls.medium}}" alt="">\n      <div class="categoria" (click)="onShowQuoteDetail(quote)">\n        <h5>Publicada el: {{ quote.date | date: \'dd/MM/yyyy H:mm\'}}</h5>\n      </div>\n      <ion-card-title (click)="onShowQuoteDetail(quote)">\n          {{ quote.title.rendered }}\n        </ion-card-title>\n      \n        <p [innerHTML]="quote.excerpt.rendered"></p>\n      \n      <div class="sociales">\n          <a href="https://www.facebook.com/sharer/sharer.php?u={{quote.link}}" target="_blank"> <ion-icon name="logo-facebook" id="facebook"></ion-icon></a> \n          <a href="http://www.twitter.com/home?status={{quote.link}}" target="_blank"><ion-icon name="logo-twitter" id="twitter"></ion-icon></a> \n      </div>\n    </ion-card-content>\n  </ion-card>\n</ion-content>\n'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\noticias\noticias.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_authservice_authservice__["a" /* AuthServiceProvider */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_authservice_authservice__["a" /* AuthServiceProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_authservice_authservice__["a" /* AuthServiceProvider */]) === "function" && _c || Object])
     ], NoticiasPage);
     return NoticiasPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=noticias.js.map
-
-/***/ }),
-
-/***/ 201:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AuthServiceProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_http__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__ = __webpack_require__(286);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rxjs_add_operator_map__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-/*
-  Auth - Service, sirve para la identificación y traer datos de la api externa.
-
-
-*/
-var AuthServiceProvider = /** @class */ (function () {
-    function AuthServiceProvider(http) {
-        this.http = http;
-        this.apiUrl = "http://lamosquitera.org/wp-json/wp/v2/posts";
-        this.apiImg = "http://localhost/apimosquitera/";
-        console.log('Hello QuotesProvider Provider');
-    }
-    AuthServiceProvider.prototype.getQuotes = function () {
-        return this.http.get(this.apiUrl).map(function (res) { return res.json(); });
-    };
-    AuthServiceProvider.prototype.getProgramacion = function () {
-        return this.http.get(this.apiImg + 'getimages.php').map(function (res) { return res.json(); });
-    };
-    AuthServiceProvider = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_http__["a" /* Http */]) === "function" && _a || Object])
-    ], AuthServiceProvider);
-    return AuthServiceProvider;
-    var _a;
-}());
-
-//# sourceMappingURL=authservice.js.map
 
 /***/ }),
 
@@ -379,7 +381,7 @@ var NoticiaPage = /** @class */ (function () {
     };
     NoticiaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-noticia',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\noticia\noticia.html"*/'<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>{{quote.title.rendered}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n  <ion-card>\n    <h2 style="text-align: center;" padding>\n      {{quote.title.rendered}}\n    </h2>\n    <ion-card-content>\n      {{quote.content.rendered}}\n    </ion-card-content>\n    <div class="sociales">\n        <a href="https://www.facebook.com/sharer/sharer.php?u={{quote.link}}" target="_blank"> <ion-icon name="logo-facebook" id="facebook"></ion-icon></a> \n        <a href="http://www.twitter.com/home?status={{quote.link}}" target="_blank"><ion-icon name="logo-twitter" id="twitter"></ion-icon></a> \n    </div>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\noticia\noticia.html"*/,
+            selector: 'page-noticia',template:/*ion-inline-start:"C:\xampp\htdocs\lamosquitera\src\pages\noticia\noticia.html"*/'<ion-header>\n\n  <ion-navbar color="danger">\n    <ion-title>{{quote.title.rendered}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content >\n  <ion-card>\n    <h2 style="text-align: center;" padding>\n      {{quote.title.rendered}}\n    </h2>\n    \n    \n      <p [innerHTML]="quote.content.rendered"></p>\n     \n    \n    <div class="sociales">\n        <a href="https://www.facebook.com/sharer/sharer.php?u={{quote.link}}" target="_blank"> <ion-icon name="logo-facebook" id="facebook"></ion-icon></a> \n        <a href="http://www.twitter.com/home?status={{quote.link}}" target="_blank"><ion-icon name="logo-twitter" id="twitter"></ion-icon></a> \n    </div>\n  </ion-card>\n</ion-content>'/*ion-inline-end:"C:\xampp\htdocs\lamosquitera\src\pages\noticia\noticia.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], NoticiaPage);
@@ -572,17 +574,17 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(272);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_contact_contact__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tabs_tabs__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(285);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_contact_contact__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_tabs_tabs__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_splash_screen__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__angular_http__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_onesignal__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_welcome_welcome__ = __webpack_require__(199);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_authservice_authservice__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_noticias_noticias__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_welcome_welcome__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__providers_authservice_authservice__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_noticias_noticias__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__angular_common_http__ = __webpack_require__(281);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_noticia_noticia__ = __webpack_require__(203);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_sociales_sociales__ = __webpack_require__(204);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_facebook_facebook__ = __webpack_require__(205);
@@ -677,9 +679,9 @@ var AppModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(193);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(194);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(196);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(197);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_onesignal__ = __webpack_require__(208);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

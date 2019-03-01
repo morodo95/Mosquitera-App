@@ -37,4 +37,7 @@ export class WelcomePage {
       this.bandera = false;
   }
 
+  whatsapp(){
+    window.open("https://api.whatsapp.com/send?phone=5492613068060","_system");
+  }
 }

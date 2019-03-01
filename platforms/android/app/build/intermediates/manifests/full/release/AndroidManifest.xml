@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.ionic.starter"
+    package="app.lamosquitera.online"
     android:hardwareAccelerated="true"
-    android:versionCode="1"
-    android:versionName="0.0.1" >
+    android:versionCode="10001"
+    android:versionName="1.0.1" >
 
     <uses-sdk
         android:minSdkVersion="19"
@@ -25,12 +25,16 @@
         android:protectionLevel="signature" />
 
     <uses-permission android:name="io.ionic.starter.permission.RECEIVE_ADM_MESSAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!-- Create a unique permission for your app and use it so only your app can receive your OneSignal messages. -->
     <permission
-        android:name="io.ionic.starter.permission.C2D_MESSAGE"
+        android:name="app.lamosquitera.online.permission.C2D_MESSAGE"
         android:protectionLevel="signature" />
 
-    <uses-permission android:name="io.ionic.starter.permission.C2D_MESSAGE" />
+    <uses-permission android:name="app.lamosquitera.online.permission.C2D_MESSAGE" />
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" /> <!-- Required, makes sure notifications are delivered on time. -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <!--
@@ -68,7 +72,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true" >
         <activity
-            android:name="io.ionic.starter.MainActivity"
+            android:name="app.lamosquitera.online.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
             android:launchMode="singleTop"
@@ -101,6 +105,15 @@
             </intent-filter>
         </receiver>
 
+        <activity
+            android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleAudioStream"
+            android:configChanges="orientation|screenSize"
+            android:label="Simple Audio Stream" />
+        <activity
+            android:name="com.hutchind.cordova.plugins.streamingmedia.SimpleVideoStream"
+            android:configChanges="orientation|screenSize"
+            android:label="Simple Video Stream" />
+
         <meta-data
             android:name="onesignal_app_id"
             android:value="" /> <!-- Deprecated - Pulled from OneSignal dashboard. -->
@@ -116,7 +129,7 @@
             <intent-filter android:priority="999" >
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="io.ionic.starter" />
+                <category android:name="app.lamosquitera.online" />
             </intent-filter>
         </receiver>
         <receiver android:name="com.onesignal.NotificationOpenedReceiver" />
@@ -180,7 +193,7 @@
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
 
-                <category android:name="io.ionic.starter" />
+                <category android:name="app.lamosquitera.online" />
             </intent-filter>
         </receiver>
         <!--
@@ -197,7 +210,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="io.ionic.starter.firebaseinitprovider"
+            android:authorities="app.lamosquitera.online.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" />
 

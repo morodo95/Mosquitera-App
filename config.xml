@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="app.lamosquitera.online" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="app.lamosquitera.online" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>La Mosquitera</name>
-    <description>Efectúa la revisión técnica vehicular obligatoria en unidades de transporte de carga, vehículos pasajeros y vehículos particulares.</description>
-    <author email="programadormartinez@gmail.com" href="http://revite.com.ar/">Revite S.A.</author>
+    <description>La Mosquitera Medios de Comunicacion.</description>
+    <author email="programadormartinez@gmail.com" href="http://lamosquitera.org/">La Mosquitera.</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

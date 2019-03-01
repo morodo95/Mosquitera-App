@@ -1,7 +1,7 @@
 
 <ion-header>
   <div style="background-color:white;">
-      <img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" >
+      <a href="www.lamosquitera.org"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>
   </div>
   <ion-navbar color="primary">
     <ion-title>Noticias</ion-title>
@@ -17,9 +17,9 @@
       <ion-card-title (click)="onShowQuoteDetail(quote)">
           {{ quote.title.rendered }}
         </ion-card-title>
-      <p>
-        {{ quote.excerpt.rendered }}
-      </p>
+      
+        <p [innerHTML]="quote.excerpt.rendered"></p>
+      
       <div class="sociales">
           <a href="https://www.facebook.com/sharer/sharer.php?u={{quote.link}}" target="_blank"> <ion-icon name="logo-facebook" id="facebook"></ion-icon></a> 
           <a href="http://www.twitter.com/home?status={{quote.link}}" target="_blank"><ion-icon name="logo-twitter" id="twitter"></ion-icon></a> 
