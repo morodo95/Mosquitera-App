@@ -35,4 +35,8 @@ export class NoticiasPage {
     this.navCtrl.push(NoticiaPage, {quote: quote});
   }
 
+  webpage(){
+    window.open("http://lamosquitera.org/","_system");
+  }
+
 }

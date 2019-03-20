@@ -1,7 +1,6 @@
-
 <ion-header>
     <div style="background-color:white;">
-      <a href="www.lamosquitera.org"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>
+      <a (click)="webpage();"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>
     </div>
   </ion-header>
 <ion-content class="body">
@@ -16,21 +15,19 @@
   <ion-card  *ngFor="let programa of programas" >
       <img src="{{programa.imagen}}" alt="">
   </ion-card>
-  <div class="mensaje">
-    <a (click)="whatsapp()">Participa por Whatsapp <ion-icon name="logo-whatsapp"></ion-icon></a>
+  <div class="mensaje" (click)="whatsapp()">
+    <a >Participa por Whatsapp <ion-icon name="logo-whatsapp"></ion-icon></a>
   </div>
   <br><br>
     <ion-slides autoplay="12000" loop="true" speed="500" >
       <ion-slide>
-        <img src="http://lamosquitera.org/wp-content/uploads/2019/02/03-LA-MOSQUITERA-354X119-1-1.gif" alt="">
+        <img src="http://lamosquitera.org/wp-content/uploads/2019/03/Banner-Gobierno-Caminos-354x119-Mosquitera.gif" alt="">
       </ion-slide>
       <ion-slide>
-        <img src="http://lamosquitera.org/wp-content/uploads/2018/12/MOSQUITERA_354x119px_6bim.gif" alt="">
+        <img src="http://lamosquitera.org/wp-content/uploads/2019/03/MOSQUITERA_354x119px_sist_atte.gif" alt="">
       </ion-slide>
       <ion-slide>
-        <img src="http://lamosquitera.org/wp-content/uploads/2018/11/sute-m%C3%A1s-para-educaci%C3%B3n-2.jpg" alt="">
+        <img src="https://i.ibb.co/zFgKqfd/sute.jpg" alt="">
       </ion-slide>
     </ion-slides>
-
-
 </ion-content>

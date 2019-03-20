@@ -1,7 +1,7 @@
 
 <ion-header>
   <div style="background-color:white;">
-      <a href="www.lamosquitera.org"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>
+      <a (click)="webpage();"><img src="../../assets/imgs/logotipo.png"  style="padding: 10px;" ></a>
   </div>
   <ion-navbar color="primary">
     <ion-title>Noticias</ion-title>
@@ -15,7 +15,7 @@
         <h5>Publicada el: {{ quote.date | date: 'dd/MM/yyyy H:mm'}}</h5>
       </div>
       <ion-card-title (click)="onShowQuoteDetail(quote)">
-          {{ quote.title.rendered }}
+          <h1 [innerHTML]="quote.title.rendered"></h1>
         </ion-card-title>
       
         <p [innerHTML]="quote.excerpt.rendered"></p>
