@@ -16,6 +16,21 @@
             ]
         },
         {
+            "outputFile": "C:\\xampp\\htdocs\\Mosquitera-App\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\cura_\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\a46d180ede11099a43a2ae25b7a34504\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "C:\\xampp\\htdocs\\revite\\platforms\\android\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {

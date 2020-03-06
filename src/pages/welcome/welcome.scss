@@ -48,6 +48,27 @@ page-welcome {
         list-style: none;
     }
 
+    .social-media{
+        margin: 10px;
+        color: white;
+        text-align: center;
+        margin: auto;
+    }
+
+    .social-media ul{
+        display: inline-flex;
+        text-decoration: none;
+        text-align: center;
+        list-style: none;
+    }
+    .social-media ul li{
+        text-decoration: none;
+        padding-right: 20px;
+        font-size: 20pt;
+
+
+    }
+
 
 
 }

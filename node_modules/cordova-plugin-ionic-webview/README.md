@@ -54,6 +54,14 @@ Preferences available for both iOS and Android platforms
 
 The default port the server will listen on. _You should change this to a random port number!_
 
+```xml
+<preference name="WKPort" value="YOUR_RANDOM_PORT_NUMBER" />
+<allow-navigation href="http://localhost:YOUR_RANDOM_PORT_NUMBER/*"/>
+```
+
+Replace `localhost` with your custom HostName, if applicable.
+
+
 ### iOS Preferences
 
 Preferences only available for iOS platform
@@ -83,8 +91,9 @@ Example `ionic://app`
 ```xml
 <preference name="WKSuspendInBackground" value="false" />
 ```
+Default value is `true` (suspend).
 
-Whether to try to keep the server running when the app is backgrounded. Note: the server will likely be suspended by the OS after a few minutes. In particular, long-lived background tasks are not allowed on iOS outside of select audio and geolocation tasks.
+Whether to suspend or try to keep the server running when the app is backgrounded. Note: the server will likely be suspended by the OS after a few minutes. In particular, long-lived background tasks are not allowed on iOS outside of select audio and geolocation tasks.
 
 #### WKBind
 

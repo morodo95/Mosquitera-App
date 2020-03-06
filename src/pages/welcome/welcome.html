@@ -5,7 +5,7 @@
   </ion-header>
 <ion-content class="body">
   <br><br>
- <br><br>
+  <br><br>
   <div class="boton">
     <button [disabled]="bandera"  (click)="play()" ><img src="../../assets/imgs/arrowButtonplay.png"></button>
     <button [disabled]="!bandera" id="pause" (click)="stop()" ><img src="../../assets/imgs/arrowButtonpause.png"></button>
@@ -17,17 +17,29 @@
   </ion-card>
   <div class="mensaje" (click)="whatsapp()">
     <a >Participa por Whatsapp <ion-icon name="logo-whatsapp"></ion-icon></a>
+    
   </div>
-  <br><br>
-    <ion-slides autoplay="12000" loop="true" speed="500" >
+  <div class="social-media">
+    <ul>
+      <li (click)="openFacebook()"><ion-icon name="logo-facebook"></ion-icon></li>
+      <li (click)="openTwitter()"><ion-icon name="logo-twitter"></ion-icon></li>
+      <li (click)="openInstagram()"><ion-icon name="logo-instagram"></ion-icon></li>
+      <li (click)="openWeb()"><ion-icon name="globe"></ion-icon></li>
+    </ul>
+  </div>
+    <ion-slides  loop="true" speed="500" autoplay="12000" >
+      <!-- <ion-slide *ngFor="let publicidad of publicidades">
+        <img src="{{publicidad.url}}" alt="">
+      </ion-slide> -->
       <ion-slide>
-        <img src="http://lamosquitera.org/wp-content/uploads/2019/03/Banner-Gobierno-Caminos-354x119-Mosquitera.gif" alt="">
+        <img src="https://i.ibb.co/FXQwYzh/MOSQUITERA-1280x426px-reina.gif">
       </ion-slide>
       <ion-slide>
-        <img src="http://lamosquitera.org/wp-content/uploads/2019/03/MOSQUITERA_354x119px_sist_atte.gif" alt="">
+        <img src="https://i.ibb.co/x3KgsM1/facebook-1583068074028.jpg">
       </ion-slide>
       <ion-slide>
-        <img src="https://i.ibb.co/zFgKqfd/sute.jpg" alt="">
+        <img src="https://i.ibb.co/y844LGf/MOSQUITERA-354x119px-magia.gif">
       </ion-slide>
     </ion-slides>
+    
 </ion-content>

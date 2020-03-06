@@ -1,6 +1,7 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage';
 import { MyApp } from './app.component';
 
 import { ContactPage } from '../pages/contact/contact';
@@ -22,6 +23,8 @@ import { FacebookPage } from '../pages/facebook/facebook';
 import { InstagramPage } from '../pages/instagram/instagram';
 import { WebPage } from '../pages/web/web';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -40,7 +43,9 @@ import { WebPage } from '../pages/web/web';
     BrowserModule,
     IonicModule.forRoot(MyApp),
     HttpModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule,
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [

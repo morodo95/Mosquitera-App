@@ -11,6 +11,7 @@ export class AuthServiceProvider {
   
   apiUrl = "http://lamosquitera.org/wp-json/wp/v2/posts";
   apiImg = "http://apimosquitera.lavena.com.ar/";
+  apiPublicidades = "http://localhost/api-publicidad/";
   constructor(public http: Http) {
   }
 
@@ -22,5 +23,8 @@ export class AuthServiceProvider {
     return this.http.get(this.apiImg+'getimages.php').map(res=>res.json());
   }
 
+  getPublicidades(){
+    return this.http.get(this.apiPublicidades + 'publicidades.php').map(res=>res.json());
+  }
 
 }

@@ -8458,7 +8458,7 @@ ion-content {
   display: block;
   width: 100%;
   height: 100%;
-  contain: layout size style;
+  contain: size style;
 }
 
 .ion-page > ion-content {
@@ -13486,8 +13486,8 @@ ion-reorder {
   transition: transform 140ms ease-in;
   transition: transform 140ms ease-in, -webkit-transform 140ms ease-in;
   pointer-events: all;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .reorder-side-start ion-reorder {
@@ -18750,7 +18750,7 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-pagination-bullet-active {
-  background: #007aff;
+  background: #d13034;
   opacity: 1;
 }
 
@@ -18791,7 +18791,7 @@ button.swiper-pagination-bullet {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #007aff;
+  background: #d13034;
   -webkit-transform: scale(0);
   transform: scale(0);
 }
@@ -20514,6 +20514,7 @@ ion-toast {
 
 .toggle-ios {
   position: relative;
+  display: block;
   width: 51px;
   height: 32px;
   -webkit-box-sizing: content-box;
@@ -20634,6 +20635,7 @@ ion-toast {
 
 .toggle-md {
   position: relative;
+  display: block;
   width: 36px;
   height: 14px;
   -webkit-box-sizing: content-box;
@@ -20751,6 +20753,7 @@ ion-toast {
 
 .toggle-wp {
   position: relative;
+  display: block;
   width: 40px;
   height: 18px;
   -webkit-box-sizing: content-box;
@@ -25514,6 +25517,11 @@ ion-navbar.toolbar {
   min-height: calc(44px + env(safe-area-inset-bottom));
 }
 
+.ios .tabs:not(.tabs-ios[tabsPlacement='top']) ion-footer .toolbar:last-child {
+  padding-bottom: 4px;
+  min-height: 44px;
+}
+
 .md ion-nav > .ion-page > .toolbar.statusbar-padding:first-child,
 .md ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child,
 .md ion-tab > .ion-page > .toolbar.statusbar-padding:first-child,
@@ -25594,6 +25602,11 @@ ion-navbar.toolbar {
   min-height: calc(56px + env(safe-area-inset-bottom));
 }
 
+.md .tabs:not(.tabs-ios[tabsPlacement='top']) ion-footer .toolbar:last-child {
+  padding-bottom: 4px;
+  min-height: 56px;
+}
+
 .wp ion-nav > .ion-page > .toolbar.statusbar-padding:first-child,
 .wp ion-nav > .ion-page > ion-header > .toolbar.statusbar-padding:first-child,
 .wp ion-tab > .ion-page > .toolbar.statusbar-padding:first-child,
@@ -25672,6 +25685,11 @@ ion-navbar.toolbar {
   padding-bottom: calc(env(safe-area-inset-bottom) + 4px);
   min-height: calc(46px + constant(safe-area-inset-bottom));
   min-height: calc(46px + env(safe-area-inset-bottom));
+}
+
+.wp .tabs:not(.tabs-ios[tabsPlacement='top']) ion-footer .toolbar:last-child {
+  padding-bottom: 4px;
+  min-height: 46px;
 }
 
 * ::-webkit-scrollbar {
@@ -25892,4 +25910,27 @@ page-welcome .slides {
   height: 200px;
   margin-top: -30px;
   list-style: none;
+}
+
+page-welcome .social-media {
+  margin: 10px;
+  color: white;
+  text-align: center;
+  margin: auto;
+}
+
+page-welcome .social-media ul {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  text-decoration: none;
+  text-align: center;
+  list-style: none;
+}
+
+page-welcome .social-media ul li {
+  text-decoration: none;
+  padding-right: 20px;
+  font-size: 20pt;
 }
