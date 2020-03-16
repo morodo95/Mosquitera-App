@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Mar 05 21:39:05 ART 2020
+#Fri Mar 06 22:32:02 ART 2020
 56.path=www/plugins/cordova-plugin-file/www/DirectoryReader.js
 5.base=C\:\\xampp\\htdocs\\Mosquitera-App\\platforms\\android\\app\\build\\intermediates\\assets\\release
 42.base=C\:\\xampp\\htdocs\\Mosquitera-App\\platforms\\android\\app\\build\\intermediates\\assets\\release
