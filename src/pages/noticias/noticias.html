@@ -10,7 +10,9 @@
 <ion-content class="body">
   <ion-card class="card" *ngFor="let quote of quotes" >
     <ion-card-content>
-      <img src="{{quote.featured_image_urls.medium}}" alt="">
+      <div class="classimage" *ngIf="quote.featured_image_urls.medium">
+        <img src="{{quote.featured_image_urls.medium}}" alt="">
+      </div>
       <div class="categoria" (click)="onShowQuoteDetail(quote)">
         <h5>Publicada el: {{ quote.date | date: 'dd/MM/yyyy H:mm'}}</h5>
       </div>
