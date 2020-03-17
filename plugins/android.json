@@ -37,6 +37,9 @@
     },
     "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "app.lamosquitera.online"
+    },
+    "cordova-plugin-nativeaudio": {
+      "PACKAGE_NAME": "app.lamosquitera.online"
     }
   },
   "dependent_plugins": {

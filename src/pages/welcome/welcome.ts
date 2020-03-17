@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthServiceProvider } from '../../providers/authservice/authservice';
-
+import { Howl } from 'howler';
 @Component({
   selector: 'page-welcome',
   templateUrl: 'welcome.html',
@@ -10,15 +10,14 @@ export class WelcomePage {
   bandera: boolean;
   programas: any[];
   publicidades: any[];
+  player: Howl = null;
   constructor( public auth: AuthServiceProvider) {
-    this.audio = new Audio('http://stream.codigosur.org:8000/mosquitera.mp3');
+ 
     this.getProgramas();
     this.getPublicidades();
     setInterval(this.getProgramas.bind(this), 90000);
     setInterval(this.getPublicidades.bind(this), 90000);
   }
-
-
   getProgramas() {
     this.auth.getProgramacion().subscribe(
       data => this.programas = data,
@@ -36,13 +35,18 @@ export class WelcomePage {
   }
 
   play(){
-    this.audio.play();
+    // this.audio.play();
+    this.player = new Howl({
+      src: 'http://stream.codigosur.org:8000/mosquitera.mp3',
+      html5: true,
+    });
+    this.player.play();
     this.bandera = true;
     
   }
 
   stop(){
-      this.audio.pause();
+    this.player.stop();
       this.bandera = false;
   }
 

@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="app.lamosquitera.online"
     android:hardwareAccelerated="true"
-    android:versionCode="10104"
-    android:versionName="1.1.4" >
+    android:versionCode="10106"
+    android:versionName="1.1.6" >
 
     <uses-sdk
         android:minSdkVersion="19"

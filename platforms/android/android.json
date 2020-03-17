@@ -47,6 +47,10 @@
             {
               "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"NativeAudio\"><param name=\"android-package\" value=\"com.rjfun.cordova.plugin.nativeaudio.NativeAudio\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -118,7 +122,7 @@
           "/*": [
             {
               "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-              "count": 2
+              "count": 3
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
@@ -126,11 +130,11 @@
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\" />",
-              "count": 1
+              "count": 2
             },
             {
               "xml": "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\" />",
-              "count": 1
+              "count": 2
             }
           ]
         }
@@ -170,6 +174,9 @@
       "PACKAGE_NAME": "app.revite.revisiontecnica"
     },
     "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "app.lamosquitera.online"
+    },
+    "cordova-plugin-nativeaudio": {
       "PACKAGE_NAME": "app.lamosquitera.online"
     }
   },
@@ -428,6 +435,14 @@
         "cordova.InAppBrowser.open",
         "window.open"
       ]
+    },
+    {
+      "id": "cordova-plugin-nativeaudio.nativeaudio",
+      "file": "plugins/cordova-plugin-nativeaudio/www/nativeaudio.js",
+      "pluginId": "cordova-plugin-nativeaudio",
+      "clobbers": [
+        "window.plugins.NativeAudio"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -441,6 +456,7 @@
     "cordova-plugin-streaming-media": "2.2.0",
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-media": "5.0.2",
-    "cordova-plugin-inappbrowser": "3.0.0"
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-nativeaudio": "3.0.9"
   }
 }

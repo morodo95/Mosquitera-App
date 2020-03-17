@@ -10,6 +10,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StreamingMedia } from '@ionic-native/streaming-media';
+import { NativeAudio } from '@ionic-native/native-audio';
 import { HttpModule } from '@angular/http';
 
 import { OneSignal } from '@ionic-native/onesignal';
@@ -22,7 +24,6 @@ import { SocialesPage } from '../pages/sociales/sociales';
 import { FacebookPage } from '../pages/facebook/facebook';
 import { InstagramPage } from '../pages/instagram/instagram';
 import { WebPage } from '../pages/web/web';
-
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -44,6 +45,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     IonicModule.forRoot(MyApp),
     HttpModule,
     HttpClientModule,
+    
     NgbModule,
     IonicStorageModule.forRoot()
   ],
@@ -65,6 +67,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     StatusBar,
     SplashScreen,
     OneSignal,
+    StreamingMedia,
+    NativeAudio,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     
