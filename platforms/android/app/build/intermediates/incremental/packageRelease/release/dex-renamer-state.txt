@@ -1,4 +1,4 @@
-#Mon Mar 16 20:23:40 ART 2020
+#Mon Mar 16 22:04:22 ART 2020
 base.0=C\:\\xampp\\htdocs\\Mosquitera-App\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
 path.0=classes.dex
 renamed.0=classes.dex
