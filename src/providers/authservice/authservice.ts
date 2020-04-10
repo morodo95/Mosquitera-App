@@ -12,7 +12,6 @@ export class AuthServiceProvider {
   apiUrl = "http://lamosquitera.org/wp-json/wp/v2/posts";
   apiImg = "http://apimosquitera.lavena.com.ar/";
   constructor(public http: Http) {
-    console.log('Hello QuotesProvider Provider');
   }
 
   getQuotes(){
